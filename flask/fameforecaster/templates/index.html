@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fame Forecaster</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/agency.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Fame Forecaster</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#uploadart">Upload Art</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Rising stars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://github.com/chocochun">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://www.linkedin.com/in/minchunzhou/">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Predicting rising stars in the art world
+</div>
+          <div class="intro-heading text-uppercase"> Fame Forecaster </div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#uploadart">Upload Arts!</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="uploadart">
+      <div class="container">
+  <center>          <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+        <h2>Please upload a painting! </h2>
+  
+  <br> 
+<strong>Files:</strong>
+    Select a painting: 
+  <br> 
+  <br><input id="file-picker" type="file" name="file" accept="image/*">
+  
+<br> 
+  <br> 
+    <strong>Height (inch):</strong> 
+    <input type="text" size="10" name="height" value="0"><p>
+<br>       
+    <strong>Width (inch): </strong>
+    <input type="text" size="10" name="width" value="0"><p>
+<br> 
+    <strong>Artist Nationality:</strong>
+    <select name="selectbox">
+        <option value='American'>American</option>
+        <option value='Australian'>Australian</option>
+        <option value='Austrian'>Austrian</option>
+        <option value='Belgian'>Belgian</option>
+        <option value='British'>British</option>
+        <option value='Canadian'>Canadian</option>
+        <option value='Chinese'>Chinese</option>
+        <option value='Danish'>Danish</option>
+        <option value='Dutch'>Dutch</option>
+        <option value='Finnish'>Finnish</option>
+        <option value='French'>French</option>
+        <option value='German'>German</option>
+        <option value='Indian'>Indian</option>
+        <option value='Iranian'>Iranian</option>
+        <option value='Italian'>Italian</option>
+        <option value='NewZealand'>NewZealand</option>
+        <option value='Russian'>Russian</option>
+        <option value='Spanish'>Spanish</option>
+        <option value='Swedish'>Swedish</option>
+        <option value='Swiss'>Swiss</option>
+        <option value='Other_artist_country'>Other_artist_country</option>
+    </select><p>
+<br> 
+  <input type="submit" value="Upload!" id="upload-button">
+</form>
+</center>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">RISING STARS</h2>
+            <h3 class="section-subheading text-muted"> Rising stars in the world </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://artinfo-images-350.s3.amazonaws.com/asi2-104096/195.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>March from the sea</h4>
+              <p class="text-muted">MICHAEL PAGE </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/static/img/portfolio/02-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Colorful Ball</h4>
+              <p class="text-muted">DONALD BAECHLER</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://artinfo-images-350.s3.amazonaws.com/asi2-111627/215.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Permian Shadows</h4>
+              <p class="text-muted">KRISTIN BAKER</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://artinfo-images-350.s3.amazonaws.com/asi2-99544/N08637-335-lr-1l.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Your Places For Me</h4>
+              <p class="text-muted">BRIAN FAHLSTROM</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://artinfo-images-350.s3.amazonaws.com/asi2-100417/N08704-99-lr-1l.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Hnggnh-hnggnh-hnggnh</h4>
+              <p class="text-muted">INGRID CALAME</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="https://artinfo-images-350.s3.amazonaws.com/asi2-107355/73.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Bunny</h4>
+              <p class="text-muted">MARI EASTMAN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About Me</h2>
+            <h3 class="section-subheading text-muted"> </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="/static/img/about/1.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2006-2010</h4>
+                    <h4 class="subheading"> Tongji University </h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Bachelor of Mathematics and Applied Mathematics</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Western_Michigan_University_seal.svg/400px-Western_Michigan_University_seal.svg.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2010-2012</h4>
+                    <h4 class="subheading">Western Michigan University</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Master of Applied and Computational Mathematics </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/062011/vandy_v.png?itok=MO8UaRQs" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2012-2018</h4>
+                    <h4 class="subheading">Vanderbilt University</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Ph.D in Biostatistics </p>
+                                        <p class="text-muted">(Expected: Summer 2018)</p>
+
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Be Part
+                    <br>Of Your
+                    <br>Organization!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="copyright">Copyright &copy; FAME FORECASTER 2018</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">March from the sea</h2>
+                  <p class="item-intro text-muted">MICHAEL PAGE FOLLOW</p>
+                  <img class="img-fluid d-block mx-auto" src="https://artinfo-images-350.s3.amazonaws.com/asi2-104096/195.jpg" alt="">
+                  <p>
+</p>
+                  <ul class="list-inline">
+                    <li>Year: 2008</li>
+                    <li>Materials:oil on wood</li>
+                    <li>Measurements: 16.00 in.(height) by 13.00 in.(width)</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Colorful Ball</h2>
+                  <p class="item-intro text-muted">DONALD BAECHLER</p>
+                  <img class="img-fluid d-block mx-auto" src="/static/img/portfolio/02-full.jpg" alt="">
+                  <p></p>
+                  <ul class="list-inline">
+                    <li>Year: 2009</li>
+                    <li>Materials: gesso, flashe and paper collage on paper</li>
+                    <li>Measurements: 40.00 in.(height) by 52.01 in. (width)</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Permian Shadows</h2>
+                  <p class="item-intro text-muted">KRISTIN BAKER</p>
+                  <img class="img-fluid d-block mx-auto" src="https://artinfo-images-350.s3.amazonaws.com/asi2-111627/215.jpg" alt="">
+                  <p></p>
+                  <ul class="list-inline">
+                    <li>Year: 2009</li>
+                    <li>Materials: acrylic on PVC</li>
+                    <li>Measurements: 20.12 in.(height) by 15.98 in.(width)
+</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Your Places For Me</h2>
+                  <p class="item-intro text-muted">BRIAN FAHLSTROM</p>
+                  <img class="img-fluid d-block mx-auto" src="https://artinfo-images-350.s3.amazonaws.com/asi2-99544/N08637-335-lr-1l.jpg" alt="">
+                  <p></p>
+                  <ul class="list-inline">
+                    <li>Year: 2005</li>
+                    <li>Materials: oil on canvas</li>
+                    <li>Measurements: 78.15 in.(height) by 92.13 in.(width)
+</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Hnggnh-hnggnh-hnggnh</h2>
+                  <p class="item-intro text-muted">INGRID CALAME</p>
+                  <img class="img-fluid d-block mx-auto" src="https://artinfo-images-350.s3.amazonaws.com/asi2-100417/N08704-99-lr-1l.jpg" alt="">
+                  <p></p>
+                  <ul class="list-inline">
+                    <li>Year: 2000</li>
+                    <li>Materials: enamel paint on aluminum</li>
+                    <li>Measurements: 72.01 in.(height) by 72.01 in.(width)</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Bunny</h2>
+                  <p class="item-intro text-muted">MARI EASTMAN</p>
+                  <img class="img-fluid d-block mx-auto" src="https://artinfo-images-350.s3.amazonaws.com/asi2-107355/73.jpg" alt="">
+                  <p></p>
+                  <ul class="list-inline">
+                    <li>Year: 2000</li>
+                    <li>Materials: acrylic and glitter on canvas in artist's frame</li>
+                    <li>Measurements: 30.31 in.(height) by 30.31 in.(width)</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="/static/js/jqBootstrapValidation.js"></script>
+    <script src="/static/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/js/agency.min.js"></script>
+
+  </body>
+
+</html>

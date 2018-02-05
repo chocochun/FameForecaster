@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fame Forecaster</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/agency.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Fame Forecaster</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">Upload Art</a>
+            </li>
+   
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://github.com/chocochun">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://www.linkedin.com/in/minchunzhou/">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in"> This artist has  <h1>{{proba}} </h1> chance to become famous! </div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#Detail">More detail!</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="Detail">
+      <div class="container">
+        
+
+      <div class="row">
+  <div class="col-md-4"> <img src=" {{url_for('send_image', filename=image_name)}}"> </div>
+
+<div class="col-md-3">
+     <p class="lead"> 
+     <big>
+     <b>Features </b><br />
+     Dominant color: <br />
+     Face Count: <br />
+          Brightness:   <br />
+      Unique color ratio: <br />
+     % of black:<br />
+     % of high brightness: <br />
+     % of low brightness:<br />
+    % of edge:<br />
+    % of corner:<br />
+</big>
+     </p>
+</div>
+
+<div class="col-md-2">
+       <p class="lead"> 
+<big>
+<b>Value</b> <br />
+ {{domaincolor}}<br />
+ {{FaceCount}}  <br />
+{{brightness}}  <br />
+{{uniqueColorRatio}} <br />
+{{thresholdBlackPerc}} <br />
+{{highbrightnessPerc}} <br />
+{{lowbrightnessPerc}}<br />
+{{EdgePer}}<br />
+{{CornerPer}} <br />
+    </big> </p>
+</div>
+
+<div class="col-md-3">
+         <p class="lead"> 
+
+<big> <b>Famous Artist  </b><br />
+ / <br />
+ / <br />
+102 ~ 170<br />
+0.12 ~ 0.42 <br />
+25 ~ 72 <br />
+0 ~ 3.7 <br />
+5 ~ 24 <br />
+5 ~ 16 <br />
+0 ~ 2.2<br />
+</big>
+     </p>
+</div>
+
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+
+
+  <center>        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/">Upload Another Art!</a> </center>
+
+
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="copyright">Copyright &copy; FAME FORECASTER 2018</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="/static/js/jqBootstrapValidation.js"></script>
+    <script src="/static/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/js/agency.min.js"></script>
+
+  </body>
+
+</html>
