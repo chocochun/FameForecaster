@@ -1,13 +1,11 @@
 # FameForecaster.com
 
---------------------------------
 
 A webapp that use painting to predict the chance that an artist will become famous. 
 
 
 ## Pipeline
 
---------------------------------
 
 1. Scraped data from blouinartsalesindex.com 
 
