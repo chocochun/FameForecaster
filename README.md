@@ -1,3 +1,4 @@
 # FameForecaster
 
-www.FameForecaster.co
+www.FameForecaster.com
+
