@@ -1,4 +1,4 @@
 #!/usr/bin/env python
-from flaskexample import app
+from fameforecaster import app
 app.run(debug = True)
 
